@@ -25,7 +25,6 @@ let aliceSymetricKey = aliceAgreement.hkdfDerivedSymmetricKey(using: SHA256.self
 // Bob too has a key with which messages can be encrypted and decrypted by him and Alice.
 let bobSymetricKey = bobAgreement.hkdfDerivedSymmetricKey(using: SHA256.self, salt: "".data(using: .utf8)!, sharedInfo: "".data(using: .utf8)!, outputByteCount: 32)
 
-
 /// A struct that represents a money order that can be sent to different users.
 struct Order: Encodable, Decodable {
     
